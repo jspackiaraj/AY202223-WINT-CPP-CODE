@@ -1,7 +1,7 @@
 # SERIES EXPANSION #
 The power series expansion of sine is an infinite series that allows you to approximate the value of the sine function to any desired degree of precision. The basic form of the series is:
 
-![Link](https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/blob/main/WEEK03-CODE/Assets/Images/01_SeriesExpansion/PowerSeriesExpansionOfSine.png)
+![Link](Assets/Images/PowerSeriesExpansionOfSine.png)
 
 The series can be truncated at any point, with the remaining terms representing the error in the approximation. The more terms you include in the series, the more precise the approximation will be.
 
@@ -35,3 +35,12 @@ Here is a write-up of the steps for programming an expansion of the sine functio
 
 > **Note**
 > It's worth noting that the number of iterations required for a certain degree of precision will depend on the value of x and the desired precision level. In general, larger values of x and higher precision levels will require more iterations to achieve the desired level of accuracy.
+
+## Output in a Console ##
+
+![Link](Assets/Images/Output.png)
+
+## Discussion of Output ##
+In the code, we have introduced a string stream object which essentially treats the string as a stream, and we have the luxury of using it like we are using one of the many stream objects as __std::cin__ or __std::cout__. With intermediate member variables to capture values of the iteration, we are able to form a neat little table with the member variable __strOutputTxt__ and  __strOutputTxt2__.   Because we are handling the same as string stream, we are able to use the methods exposed in __<iomanip>__ to modify the output.  Note how the iteration progresses in the first run.  In the second and thrid run, note how the display changes when string values of  __strOutputTxt__ and  __strOutputTxt2__.
+    
+    __<iomanip>__ is powerful, and we will be creating text files and ensuring that the number of decimal places, precision in display and internal rounding to a level desirable for the program will be written out.
