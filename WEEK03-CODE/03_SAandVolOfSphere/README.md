@@ -14,3 +14,8 @@ Here is an outline of the steps you can follow to find the surface area and volu
 > When the expression is given as 4/3, the resulting value will be truncated to an int, in otherwords 1.  To make sure that these constant values  will yield the desired floating point number,  cast one or both the values to a floating point. 
 ## Availability of the program ##
 The proposed solution will be available after __09 Jan 2023__
+## Output in a Console ##
+
+![Link](Assets/Images/Output.png)
+
+## Discussion of Output ##
