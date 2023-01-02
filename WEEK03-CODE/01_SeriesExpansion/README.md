@@ -1,7 +1,7 @@
 # SERIES EXPANSION #
 The power series expansion of sine is an infinite series that allows you to approximate the value of the sine function to any desired degree of precision. The basic form of the series is:
 
-![Link](https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/blob/main/WEEK03-CODE/01_SeriesExpansion/PowerSeriesExpansionOfSine.png)
+![Link](https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/blob/main/WEEK03-CODE/Assets/Images/01_SeriesExpansion/PowerSeriesExpansionOfSine.png)
 
 The series can be truncated at any point, with the remaining terms representing the error in the approximation. The more terms you include in the series, the more precise the approximation will be.
 
