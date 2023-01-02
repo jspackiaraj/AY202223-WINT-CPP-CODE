@@ -22,15 +22,15 @@ Here is an outline of the steps you can follow to program the expansion of the s
 
 ## Pseudocode for determining the value of sine using an expansion series ##
 Here is a write-up of the steps for programming an expansion of the sine function using the power series, along with the number of iterations required for a certain degree of precision:
-1. Begin by writing a function that takes in a value for __x__ (in radians) and the desired precision level. (In our program, we have the option to enter the value as an angle in degree. Simply use the appropriate method.
-2. Initialize a variable __sum__ to 0, which will be used to store the result of the expansion.
-3. Initialize a variable __prev__ to some large value (e.g. 10^9), which will be used to store the result of the previous iteration. (In our case, there is a means to set the number of decimal places. It has been set to 3)
-4. Initialize a variable __i__ to 1, which will be used as the exponent in the power series expansion.
+1. Begin by writing a function that takes in a value for **x** (in radians) and the desired precision level. (In our program, we have the option to enter the value as an angle in degree. Simply use the appropriate method.
+2. Initialize a variable **sum** to 0, which will be used to store the result of the expansion.
+3. Initialize a variable **prev** to some large value (e.g. 10^9), which will be used to store the result of the previous iteration. (In our case, there is a means to set the number of decimal places. It has been set to 3)
+4. Initialize a variable **i** to 1, which will be used as the exponent in the power series expansion.
 5. Write a loop that will continue until the difference between sum and prev is less than the desired precision level.
-6. Inside the loop, calculate the term in the power series expansion using the current value of __i__, and add it to the sum.
-7. Set the value of __prev__ to the current value of __sum__.
-8. Increment __i__ by 1.
-9. Return the value of __sum__ as the result of the function.
+6. Inside the loop, calculate the term in the power series expansion using the current value of **i**, and add it to the sum.
+7. Set the value of **prev** to the current value of **sum**.
+8. Increment **i** by 1.
+9. Return the value of **sum** as the result of the function.
 10. To compare the result of the expansion to the previous value, you can use an if statement to check whether the difference between sum and prev is less than the desired precision level. You can exit the loop and return the result if it is. If not, then you can continue iterating until the difference between the two values is small enough.
 
 > **Note**
@@ -41,6 +41,6 @@ Here is a write-up of the steps for programming an expansion of the sine functio
 ![Link](Assets/Images/Output.png)
 
 ## Discussion of Output ##
-In the code, we have introduced a string stream object which essentially treats the string as a stream, and we have the luxury of using it like we are using one of the many stream objects as __std::cin__ or __std::cout__. With intermediate member variables to capture values of the iteration, we are able to form a neat little table with the member variable __strOutputTxt__ and  __strOutputTxt2__.   Because we are handling the same as string stream, we are able to use the methods exposed in __<iomanip>__ to modify the output.  Note how the iteration progresses in the first run.  In the second and thrid run, note how the display changes when string values of  __strOutputTxt__ and  __strOutputTxt2__.
+In the code, we have introduced a string stream object which essentially treats the string as a stream, and we have the luxury of using it like we are using one of the many stream objects as **std::cin** or **std::cout**. With intermediate member variables to capture values of the iteration, we are able to form a neat little table with the member variable **strOutputTxt** and  **strOutputTxt2**.   Because we are handling the same as string stream, we are able to use the methods exposed in **\<iomanip\>** to modify the output.  Note how the iteration progresses in the first run.  In the second and thrid run, note how the display changes when string values of  **strOutputTxt** and  **strOutputTxt2**.
     
-    __<iomanip>__ is powerful, and we will be creating text files and ensuring that the number of decimal places, precision in display and internal rounding to a level desirable for the program will be written out.
+The header **\<iomanip\>** is powerful, and we will be creating text files and ensuring that the number of decimal places, precision in display and internal rounding to a level desirable for the program will be written out.
