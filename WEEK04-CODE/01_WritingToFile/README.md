@@ -9,7 +9,7 @@ Here is an outline of the steps you can follow to find the surface area and volu
 1. Start by creating a file object, with an __ofstream__ object, the file will be opened so that it can be written to.
 2. Write to the file just as how you would write to console using __cout__.
 > **Note**
-> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use _LF_. 
+> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__. 
 ## Availability of the program ##
 The proposed solution will be available after __03 Jan 2023__
 ## Output in a Console ##
