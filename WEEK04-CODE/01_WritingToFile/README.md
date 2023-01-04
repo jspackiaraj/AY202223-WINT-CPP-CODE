@@ -4,6 +4,10 @@ Write a program to write a file using C++.
 A proposed solution has been attached.  Please note that the file will be written to the directory where the executable will be created.  In the case of my solution, it got written to 
 
 ```D:\CPP\CROSS PF\PART-02_ClassConcepts\002_FileWriting\out\build\x64-debug\```
+> **Note**
+> The file name contains \.  In languages like C and C++, the symbol '\' is used as a prefix for escape characters. Thus, to use it these symbols have to be escaped themselves.
+> So, for the above path to be used as a string, it should be entered as 
+> ```_D:\\CPP\\CROSS PF\\PART-02_ClassConcepts\\002_FileWriting\\out\\build\\x64-debug\\_``` when storing them in strings.
 ## Outline of Solution ##
 Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
 1. Start by creating a file object, with an __ofstream__ object, the file will be opened so that it can be written to.
