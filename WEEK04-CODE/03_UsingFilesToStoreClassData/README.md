@@ -6,16 +6,16 @@ A proposed solution has been attached.  Please refer to the previous programs fo
 ## Outline of Solution ##
 Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
 1. Start by creating an object to store the data
-2. Crete the file object, with an __ofstream__ object, the file will be opened so that it can be written to.
+2. Create the file object, with an __ofstream__ object, the file will be opened so that it can be written to.
 3. Write to the file just as how you would write to console using __cout__.  In this case, it is advantageous to use the pointer to the object and write the data to the file.
 > **Note**
-> The file created has the datatype of the members of the class also stored.  Open the file in a text editor and check it up. 
-## Availability of the program ##
-The proposed solution will be available after __07 Jan 2023__
+> The file created has the datatype of the members of the class also stored.  Open the file in a text editor and check it up.
 ## Output in a Console ##
 
 ![Link](Assets/Images/Output.png)
 
 ## Discussion of Output ##
-Open the file written by the program.  You will notice that there are additional information written.  Although the output is still a text file.
+Open the file written by the program.  You will notice that there are additional information written.  Although the output is still a text file. 
+## A note of caution about the program ##
+The third _John Doe2_ was tried by replacing the same with a very long name.  This failed.  We will have a look at [https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/tree/main/WEEK04-CODE/03A_UsingFilesToStoreClassDataModified](https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/tree/main/WEEK04-CODE/03A_UsingFilesToStoreClassDataModified).
 
