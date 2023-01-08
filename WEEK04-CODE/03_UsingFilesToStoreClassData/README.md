@@ -15,7 +15,7 @@ Here is an outline of the steps you can follow to find the surface area and volu
 ![Link](Assets/Images/Output.png)
 
 ## Discussion of Output ##
-Open the file written by the program.  You will notice that there are additional information written.  Although the output is still a text file. 
+Open the file written by the program.  You will notice that there are additional information written.  Although the output is marked with an extension stating it is a text file, it is not one. ![Link](Stats.txt) stores a copy of the output of the code got when compiled on the windows environment.  You can try using a HEX editor.  I suggest you try the [Online HEX editor](https://hexed.it/).  Upload the file and see the contnent.
 ## A note of caution about the program ##
 The third _John Doe2_ was tried by replacing the same with a very long name.  This failed.  We will have a look at [https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/tree/main/WEEK04-CODE/03A_UsingFilesToStoreClassDataModified](https://github.com/jspackiaraj/AY202223-WINT-CPP-CODE/tree/main/WEEK04-CODE/03A_UsingFilesToStoreClassDataModified).
 
