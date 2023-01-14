@@ -8,19 +8,28 @@ A proposed solution has been attached.  A simple function reads the location men
 > The file name contains \.  As mentioned earlier, in languages like C and C++, the symbol '\' is used as a prefix for escape characters. Thus, to use it these symbols have to be escaped themselves.
 > So, for the above path to be used as a string, it should be entered as 
 > ```_D:\\CPP\\CROSS_PF\\PART-02_ClassConcepts\\05_ErrorHandling_DemonstratedWithAverageOfFileData\\out\\build\\x64-debug``` when storing them in strings.
+
+Ensure that the directory where you have the executable has the file __input1.txt__ stored.
 ## Outline of Solution ##
 Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
 1. The file which is to be opened is received as a parameter and the file is checked if it can be opened.
-2. Write to the file just as how you would write to console using __cout__.
+2. Read the file line by line and add a newline before storing it in a variable.  When there are no more lines in the file, return the contents of the file.
+3. If there is an error in opening the file (Typically, file not found), a string with contents __FNF__ is returned.  This indicates that the file is  not available and the calling method, interprets the same accordingly.
 > **Note**
-> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__.  In the attached file, the line endings are _LF_ and the character set is _UTF-8_ as seen in the image below
->![Link](Assets/Images/Output.png)
+> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__.  In the attached file, the line endings are _LF_ and the character set is _UTF-8_ as seen in the image below in the status bar of notepad, which was used to open the file.
+>![Link](Assets/Images/Output_2.png)
 
 ## Availability of the program ##
 The proposed solution will be available after __03 Jan 2023__
 ## Output in a Console ##
-
+The following output is one in which the file is not available is not available in the directory where the executable is run from.
 ![Link](Assets/Images/Output.png)
 
 ## Discussion of Output ##
-Open the file written by the program.  Now, try to change the output using __\<iomanip\>__ and discover the different possibilities.
+1. Open the directory and change the file name.  See what happens.  
+2. Change the file name in the CPP file and compile it to read another file.
+3. Uncomment the lines _34_ and _35_ and type the name of the file to be opened.
+4. You can also try to change the location of the file which is to be read from.  This will be a good exercise to understand escaping paths. 
+5. Open files other than the text files and try to see the contents.
+> **Note**
+> In this program, the FNF was something that we defined.  Any person using the function should know that the function will return an FNF status.  Extending this principle, when a function or method written by another programmer is being reused, the person using the other persons work should be throughly familiar with the intent and then use the contents.
