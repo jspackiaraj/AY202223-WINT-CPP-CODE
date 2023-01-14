@@ -15,4 +15,4 @@ The proposed solution will be available after __03 Jan 2023__
 ![Link](Assets/Images/Output.png)
 
 ## Discussion of Output ##
-Open the file written by the program.  Now, try to give different values with different white spaces as  \n, \t or an enter key.  Study the way that the input is given and do a little reading on hte same.  One of the biggest takeaway is that when a string is to be input, it will not be possible to use **cin** in the present form to get input for a string like say, _J S Packiaraj_, as there are spaces in the string.
+Open the file written by the program.  Now, try to give different values with different white spaces as  \n, \t or an enter key.  Study the way that the input is given and do a little reading on the same.  One of the biggest takeaway is that when a string is to be input, it will not be possible to use **cin** in the present form to get input for a string like say, _J S Packiaraj_, as there are spaces in the string.
