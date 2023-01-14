@@ -5,7 +5,7 @@ A proposed solution has been attached.  A simple function reads the location men
 
 ```D:\CPP\CROSS_PF\PART-02_ClassConcepts\05_ErrorHandling_DemonstratedWithAverageOfFileData\out\build\x64-debug\```
 > **Note**
-> The file name contains \.  As mentioned earlier, in languages like C and C++, the symbol '\' is used as a prefix for escape characters. Thus, to use it these symbols have to be escaped themselves.
+> The file name contains \\.  As mentioned earlier, in languages like C and C++, the symbol '\' is used as a prefix for escape characters. Thus, to use it these symbols have to be escaped themselves.
 > So, for the above path to be used as a string, it should be entered as 
 > ```_D:\\CPP\\CROSS_PF\\PART-02_ClassConcepts\\05_ErrorHandling_DemonstratedWithAverageOfFileData\\out\\build\\x64-debug``` when storing them in strings.
 
@@ -19,8 +19,11 @@ Here is an outline of the steps you can follow to find the surface area and volu
 > The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__.  In the attached file, the line endings are _LF_ and the character set is _UTF-8_ as seen in the image below in the status bar of notepad, which was used to open the file.
 >![Link](Assets/Images/Output_2.png)
 
-## Availability of the program ##
-The proposed solution will be available after __03 Jan 2023__
+## Introducing the c_str() ##
+`c_str()` is a function in the C++ standard library that returns a pointer to a string that ends with a null character and has the same characters as the string object it was called on.  The returned pointer is to a character array that is stored in the string object and is guaranteed to be valid until the string is changed.
+
+The ifstream function Object() constructor takes as an argument a C-style string, which is a character array that ends with a null character.  In this programme, `fileName.c str()` is used to transform the fileName string object into a null-terminated character array, which is what the ifstream constructor needs to open a file.  `fileName.c str()` returns a pointer to the first character of the string object. This pointer is passed as an argument to the ifstream function Object() constructor to open the file.  It is important to remember that `c_str()` does not guarantee that the C-style string will still be valid after the string object is changed. 
+
 ## Output in a Console ##
 The following output is one in which the file is not available is not available in the directory where the executable is run from.
 ![Link](Assets/Images/Output.png)
