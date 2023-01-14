@@ -11,7 +11,10 @@ A proposed solution has been attached.  A simple function reads the location men
 
 Ensure that the directory where you have the executable has the file __input1.txt__ stored.
 ## Outline of Solution ##
-Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
+Here is an outline of the steps you can follow to read a file and have a basic error handling:
+
+The most common error occurs when the file is not available for a computer process because it is either locked by the operating system for another process, or it is not available in the location where the program is looking for it.  In this case, we will only check if the file is available, using the `if` statement.
+
 1. The file which is to be opened is received as a parameter and the file is checked if it can be opened.
 2. Read the file line by line and add a newline before storing it in a variable.  When there are no more lines in the file, return the contents of the file.
 3. If there is an error in opening the file (Typically, file not found), a string with contents __FNF__ is returned.  This indicates that the file is  not available and the calling method, interprets the same accordingly.
@@ -26,7 +29,9 @@ The ifstream function Object() constructor takes as an argument a C-style string
 
 ## Output in a Console ##
 The following output is one in which the file is not available is not available in the directory where the executable is run from.
+
 ![Link](Assets/Images/Output.png)
+
 The contents of the file __input1.txt__ is read and the screen shot of the same is shown below.
 
 >![Link](Assets/Images/Output_1.png)
