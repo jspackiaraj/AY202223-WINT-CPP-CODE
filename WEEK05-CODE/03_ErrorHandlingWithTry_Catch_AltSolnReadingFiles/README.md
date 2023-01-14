@@ -1,41 +1,31 @@
 # Question #
 Write a program which has a function to read information from a file using C++.  This function reads the file sent to it as a parameter.  Have a basic error handling mechanism to check if the file to be read is available in the specified path, otherwise give an error message out.
 ## About the proposed solution ##
-A proposed solution has been attached.  A simple function reads the location mentioned and returns the content of the file if the file exists in the specified location.  Please note that the file will be read from the directory where the executable will be created.  In the case of my solution, it was 
+A proposed solution has been attached.  This program is very similar to the [previous exercise](../02_ErrorHandlingWithTry_Catch_ReadingFiles/), with the exception that we will use the `try .. catch` block handle an error that is thrown by `throw`. As before, a simple function reads the location mentioned and returns the content of the file if the file exists in the specified location.  Please note that the file will be read from the directory where the executable will be created.
 
-```D:\CPP\CROSS_PF\PART-02_ClassConcepts\05_ErrorHandling_DemonstratedWithAverageOfFileData\out\build\x64-debug\```
 > **Note**
-> The file name contains \\.  As mentioned earlier, in languages like C and C++, the symbol '\' is used as a prefix for escape characters. Thus, to use it these symbols have to be escaped themselves.
-> So, for the above path to be used as a string, it should be entered as 
-> ```_D:\\CPP\\CROSS_PF\\PART-02_ClassConcepts\\05_ErrorHandling_DemonstratedWithAverageOfFileData\\out\\build\\x64-debug``` when storing them in strings.
+> Go through the previous exercises where additional information on file handling, escaping paths and information of the usage of `try .. catch` and the `throw` statement is available.  This exercise builds on the [previous exercise](../02_ErrorHandlingWithTry_Catch_ReadingFiles/).
 
-Ensure that the directory where you have the executable has the file __input1.txt__ stored.
 ## Outline of Solution ##
-Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
-1. The file which is to be opened is received as a parameter and the file is checked if it can be opened.
-2. Read the file line by line and add a newline before storing it in a variable.  When there are no more lines in the file, return the contents of the file.
-3. If there is an error in opening the file (Typically, file not found), a string with contents __FNF__ is returned.  This indicates that the file is  not available and the calling method, interprets the same accordingly.
-> **Note**
-> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__.  In the attached file, the line endings are _LF_ and the character set is _UTF-8_ as seen in the image below in the status bar of notepad, which was used to open the file.
->![Link](Assets/Images/Output_2.png)
-
-## Introducing the c_str() ##
-`c_str()` is a function in the C++ standard library that returns a pointer to a string that ends with a null character and has the same characters as the string object it was called on.  The returned pointer is to a character array that is stored in the string object and is guaranteed to be valid until the string is changed.
-
-The ifstream function Object() constructor takes as an argument a C-style string, which is a character array that ends with a null character.  In this programme, `fileName.c_str()` is used to transform the fileName string object into a null-terminated character array, which is what the ifstream constructor needs to open a file.  `fileName.c_str()` returns a pointer to the first character of the string object. This pointer is passed as an argument to the ifstream function Object() constructor to open the file.  It is important to remember that `c_str()` does not guarantee that the C-style string will still be valid after the string object is changed. 
+This exercise is the same as the [previous exercise](../02_ErrorHandlingWithTry_Catch_ReadingFiles/), but for the position where the `try .. catch` block has been placed.
 
 ## Output in a Console ##
-The following output is one in which the file is not available is not available in the directory where the executable is run from.
+The output of the program is similar to the previous exercise.  The following output is one in which the file is not available is not available in the directory where the executable is run from.
+
 ![Link](Assets/Images/Output.png)
+
 The contents of the file __input1.txt__ is read and the screen shot of the same is shown below.
 
 >![Link](Assets/Images/Output_1.png)
 
 ## Discussion of Output ##
-1. Open the directory and change the file name.  See what happens.  
-2. Change the file name in the CPP file and compile it to read another file.
-3. Uncomment the lines _34_ and _35_ and type the name of the file to be opened.
-4. You can also try to change the location of the file which is to be read from.  This will be a good exercise to understand escaping paths. 
-5. Open files other than the text files and try to see the contents.
+As in the [previous exercise](../02_ErrorHandlingWithTry_Catch_ReadingFiles/), 
+
+1. Play around with the directory location of the file to be read and the other suggested activities.  
+2. Which of the options do you find more elegant.
+3. Note how the condition with error has been handled irrespective of the placement of the `try .. catch` block.  
+4. Explore alternate places where error can be got (eg. Wrong data type getting input, divide by zero errors, overflow of variables, or when memory cannot be allocated) and think of the best way that these errors can be handled.
 > **Note**
-> In this program, the FNF was something that we defined.  Any person using the function should know that the function will return an FNF status.  Extending this principle, when a function or method written by another programmer is being reused, the person using the other persons work should be throughly familiar with the intent and then use the contents.
+> 1. Error message in this case was what we specified.  C++ does not have standard errors, however, many libraries, frameworks and operating systems have their own error codes.  Look for the standard errors which you can capitalise upon.
+> 2. It is a good practice for programmers or programming teams to develop their own standard error codes.  
+> 3. To faciliate ease in debugging, it is a good practice to have the program communicate meaningful error messages.  In the previous programs, "__FNF__" was meant to communicate __File Not Found__.  Without this explanation, it will be difficult for a person to understand that it is an error message that we, as the programmers, had created.  On the other hand, a simple message '*File not found, check the path*', '*Operating System lock detected on file, wait for the file to be free or unlock the file*' would have been more useful.
