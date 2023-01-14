@@ -24,6 +24,9 @@ The proposed solution will be available after __03 Jan 2023__
 ## Output in a Console ##
 The following output is one in which the file is not available is not available in the directory where the executable is run from.
 ![Link](Assets/Images/Output.png)
+The contents of the file __input1.txt__ is read and the screen shot of the same is shown below.
+
+>![Link](Assets/Images/Output_1.png)
 
 ## Discussion of Output ##
 1. Open the directory and change the file name.  See what happens.  
