@@ -19,7 +19,7 @@ The most common error occurs when the file is not available for a computer proce
 2. Read the file line by line and add a newline before storing it in a variable.  When there are no more lines in the file, return the contents of the file.
 3. If there is an error in opening the file (Typically, file not found), a string with contents __FNF__ is returned.  This indicates that the file is  not available and the calling method, interprets the same accordingly.
 > **Note**
-> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__.  In the attached file, the line endings are _LF_ and the character set is _UTF-8_ as seen in the image below in the status bar of notepad, which was used to open the file.
+> The line endings are generated according to the platform.  On windows machines, it will be __CR LF__.  On Linux machines, althoug __CR LF__ works, it is better to use __LF__.  In the attached file,  the character set is _UTF-8_ (refer 1, in the image), and the line endings are _LF_ (refer 2, in the image) as seen in the image below in the status bar of notepad, which was used to open the file.
 >![Link](Assets/Images/Output_2.png)
 
 ## Introducing the c_str() ##
