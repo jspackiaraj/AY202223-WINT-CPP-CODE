@@ -22,7 +22,9 @@ Here, the `try block` has code that has a potential to have an errror.  The `thr
 
 ## Output in a Console ##
 The following output is one in which the file is not available is not available in the directory where the executable is run from.
+
 ![Link](Assets/Images/Output.png)
+
 The contents of the file __input1.txt__ is read and the screen shot of the same is shown below.
 
 >![Link](Assets/Images/Output_1.png)
