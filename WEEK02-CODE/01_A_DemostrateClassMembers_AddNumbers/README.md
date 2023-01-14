@@ -7,6 +7,7 @@ A proposed solution has been attached.  Please note that we have used exposed me
 
 ## Outline of Solution ##
 In this program, the user is prompted to enter two numbers, which are then passed as arguments to the constructor of the class. The constructor sets the values of the private members **dblA** and **dblB** to the values passed as arguments. The **Sum()** method is then called to add the two numbers and store the result in dblC. Finally, the **getSoln()** method is called to return the value of **dblC**, which is the sum of the two numbers.
+The cin pushes the input done by a user on the console to the variables.  We have added one more line to display the contents of the variables to help us gain insight on the order in which the items in the buffer will be pushed into variables by **cin**.
 ## Availability of the program ##
 The proposed solution will be available after __03 Jan 2023__
 ## Output in a Console ##
