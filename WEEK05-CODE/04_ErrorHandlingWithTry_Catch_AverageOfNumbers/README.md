@@ -1,5 +1,3 @@
->**Warning**
-> This description is work in progress.
 # Question #
 Write a program which has a function to read the numeric information from a file using C++, and reports the size of the file and the average of the elements present in the file.  This function reads the file sent to it as a parameter.  Have error handling mechanism with multiple try .. catch blocks to handle exceptions thrown by the program as givn below:
 1. check if the file to be read is available in the specified path, otherwise give an error message out.
@@ -25,29 +23,37 @@ The most common error occurs when the file is not available for a computer proce
 
 To discuss the three types of potential problems that we are addressing, we will have three input files. 
 1. **input1.txt**, continues to be the file with the correct data, as in the previous cases.
-2. **input.txt
+2. **input.txt** has an invalid entry which cannot be converted into a numeric datatype.
+3. **input2.txt** is an empty file.  It is a zero length file.  Essentially, this file enables the program to test and prove that it can successfully handle the zero length file. 
 
-## Introducing the try .. catch block and the throw statement ##
-Here, the `try block` has code that has a potential to have an errror.  The `throw` statement within the try block, is used to communicate that an error is present to a `catch` block.   On encountering an error, the __throw__ statement sends an error message specified by the programmer, which will be handled by the `catch` block.  This priciple can be used to build more involved error handlers, by having multiple __*catch*__ blocks.  The __*throw*__ statement interrupts the normal flow of the program and should be used in __*exceptional*__ situations only, in combination with a __*try .. catch*__ block.
+## Arrangement of Catch blocks ##
+The catch block tries to match the errror message with the data type that the block is designed to handle.  If the parameter matches the datatype of the parameter the catch statement receives, then the actions specified in that block are carried out.
 
+This calls for careful design of the catch block.  If two errors throw a int and a double error type, the order in which the **catch**blocks appear should be, first the int and then the double as the double can hanlde the int type of data.  In this manner, care should be taken in the arrangement of the catch blocks.   
+
+## The Standard error stream ##  
+The catch blocks, in this case, output the error to the `cerr`.  `cerr` is the _error stream_.  The error stream provides a mechanism to immediately display any information which is passed to it to the console.   
 ## Output in a Console ##
-The following output is one in which the file is not available is not available in the directory where the executable is run from.
+The following output is one in which the file which is to be read has numbers, one to a line and the average of the same is displayed.  The contents of the file __input1.txt__ is read and the screen shot of the same is shown below.
 
 ![Link](Assets/Images/Output.png)
 
-The contents of the file __input1.txt__ is read and the screen shot of the same is shown below.
+The following output is one in which the file which is to be read has a non-numeric data. The corresponding error message is printed.  The contents of the file __input.txt__ is read and the screen shot of the same is shown below.
 
 >![Link](Assets/Images/Output_1.png)
+
+In this case, observe that the file size is not given by the program.  This is because the catch block again throws an errror of datatype **invalid_argument**, which is handled in the **main()** function.  It also serves as an example demonstrating the way program continues with the line immediately after the **catch** block of statements.
+
+The following output is one in which the file which is to be read is an empty one. The corresponding error message is printed.  The contents of the file __input2.txt__ is read and the screen shot of the same is shown below.
+
+>![Link](Assets/Images/Output_2.png)
+
+
+As always, all these files should be available in the directory where the executable is run from.  With practice, the behaviour of the program can be finely controlled.
 
 ## Discussion of Output ##
 As in the previous case,
 
-1. Open the directory and change the file name.  See what happens.  
-2. Change the file name in the CPP file and compile it to read another file.
-3. Uncomment the lines _34_ and _35_ and type the name of the file to be opened.
-4. You can also try to change the location of the file which is to be read from.  This will be a good exercise to understand escaping paths. 
-5. Open files other than the text files and try to see the contents.
-6. Look for some of the standard error messages encountered for diffferent conditions.
-> **Note**
-> 1. Error message in this case was what we specified.  Look for the standard errors which a programming language has to offer.
-> 2. Try and understand the reason of a __return 0;__ or a __return
+1. Open the directory and change the file name, and try the other types.  See what happens.  
+2. Play around with the catch block and its position..
+3. Read about the `cerr` and explain its functioning as opposed to `cout`. 
