@@ -105,5 +105,5 @@ int main() {
 	else {
 		std::cout << "Error in opening file.  Code did not run as intended. " << endl;
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }
