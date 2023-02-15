@@ -209,6 +209,19 @@ int main()
 					std::cout << "C[" << intCntI << "][" << intCntJ << "] " << dblMatC[intCntI][intCntJ] << endl;
 				}
 			}
+			// Loop through the array, add the values and print the values one per row, as required by the question
+			std::cout << "================" << endl << endl;
+			std::cout << "================" << endl << endl;
+			std::cout << "Print the values one per row, as required by the question" << endl;
+			std::cout << "================" << endl;
+			std::cout << intNumRowsMatA << endl;
+			std::cout << intNumColsMatA << endl;
+			for (intCntI = 0; intCntI < intNumRowsMatA; intCntI++) {
+				for (intCntJ = 0; intCntJ < intNumColsMatA; intCntJ++) {
+					dblMatC[intCntI][intCntJ] = dblMatA[intCntI][intCntJ] + dblMatB[intCntI][intCntJ];
+					std::cout << dblMatC[intCntI][intCntJ] << endl;
+				}
+			}
 			std::cout << endl << "End of Run .." << endl;
 		}
 		else {
