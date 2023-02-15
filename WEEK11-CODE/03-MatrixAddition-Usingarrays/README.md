@@ -4,6 +4,9 @@ The program's output will be expected to print the sum of the two matrices in an
 ## About the proposed solution ##
 A proposed solution has been attached.  The program uses dynamic memory allocation and initialises a block of code that will be contiguous.  The information from the file is read and the matrix is populated in the memory locations allocated.   The array to store the sum of the first two matrices is populated with the sum of the two matrices and it is looped through and the output is printed as required.
 In this solution, since the size is known before hand, the rows and columns are comfortably populated by using the main loop that reads the file.  The pre-increment operator is used in the check, which elimnates the need to increment the value before making the logical decision if the columns in a specific row of data is read and populated in an array.  Once a row of data is read, the counter that tracks the row gets incremented and the process repeats till all the rows are accounted for.  
+The files read by this program __matA.txt__ and __matB.txt__, are stored in the ![Assets](Assets) folder.
+> **Note**
+>  These two files should be present in the directory as where the executable is compiled and run from.  Any file can be used, however, the path should be included, if the files to be read are not in the same path as where the executable is located in.
 ## Outline of Solution ##
 Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
 1. Start by getting the file names where the matrices are stored.  In this case, the path is hardcoded, but you can uncomment _line 41_ and _line 51_ and be able to enter custom file names to be read by the program.
