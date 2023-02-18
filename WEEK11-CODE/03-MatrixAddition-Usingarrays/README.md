@@ -8,7 +8,7 @@ The files read by this program __matA.txt__ and __matB.txt__, are stored in the 
 > **Note**
 >  These two files should be present in the directory as where the executable is compiled and run from.  Any file can be used, however, the path should be included, if the files to be read are not in the same path as where the executable is located in.
 ## Outline of Solution ##
-Here is an outline of the steps you can follow to find the surface area and volume of a sphere:
+Here is an outline of the steps you can follow to find the sum of matrices:
 1. Start by getting the file names where the matrices are stored.  In this case, the path is hardcoded, but you can uncomment _line 41_ and _line 51_ and be able to enter custom file names to be read by the program.
 2. A few switches have been added to the program as boolean values.  These switches determine the behaviour of different parts of the program.
 3. The __main()__ method reads both of the files and populate the matrices.  The first two rows of these files contains information of the number of rows and columns that are present in the matrices whose data is stored by the file.
